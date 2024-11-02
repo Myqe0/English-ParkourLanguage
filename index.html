@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parkour Language Translator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="navbar">
+        <h1>Parkour Language Translator</h1>
+        <div class="tabs">
+            <button onclick="showTab('translator')">Translator</button>
+            <button onclick="showTab('learning')">Parkour Language Learning</button>
+        </div>
+    </div>
+
+    <div id="translator" class="tab-content">
+        <div class="translator-section">
+            <div>
+                <label>English:</label>
+                <textarea id="englishInput" placeholder="Type English here..."></textarea>
+                <button onclick="translateToParkour()">Translate to Parkour</button>
+            </div>
+            <div>
+                <label>Parkour Language:</label>
+                <textarea id="parkourInput" placeholder="Type Parkour Language here..."></textarea>
+                <button onclick="translateToEnglish()">Translate to English</button>
+                <button class="copy-btn" onclick="copyToClipboard('parkourInput')">Copy Parkour</button>
+            </div>
+        </div>
+    </div>
+    
+    <div id="learning" class="tab-content" style="display: none;">
+        <h2>Parkour Language Alphabet</h2>
+        <div id="parkourAlphabet"></div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
